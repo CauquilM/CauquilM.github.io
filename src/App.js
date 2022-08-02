@@ -127,6 +127,7 @@ function App() {
 
   return (
     <div className="App">
+      <style>{"body{background-color:#2f043a; color: white;}"}</style>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/negative-action" element={<NegativeAction />} />
