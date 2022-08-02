@@ -1,13 +1,12 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import SettingsIcon from "@mui/icons-material/Settings";
-import QueryStatsOutlinedIcon from "@mui/icons-material/QueryStatsOutlined";
-import Divider from "@mui/material/Divider";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
     <div>
+      <style>{"body{background-color:#2f043a; color: white;}"}</style>
       <Grid
         container
         alignItems="center"
@@ -41,32 +40,7 @@ function Home() {
           </Button>
         </Grid>
       </Grid>
-      <Grid
-        container
-        textAlign="center"
-        style={{
-          marginTop: "7vh",
-        }}
-      >
-        <Grid item xs={6} textAlign="center">
-          <Button
-            variant="outlined"
-            style={{ color: "white" }}
-            startIcon={<QueryStatsOutlinedIcon />}
-          >
-            Statistics
-          </Button>
-        </Grid>
-        <Grid item xs={6} textAlign="center">
-          <Button
-            variant="outlined"
-            style={{ color: "white" }}
-            startIcon={<SettingsIcon />}
-          >
-            Settings
-          </Button>
-        </Grid>
-      </Grid>
+      <Footer />
     </div>
   );
 }
