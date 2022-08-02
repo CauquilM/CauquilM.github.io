@@ -121,7 +121,8 @@ function App() {
 
   return (
     <div className="App">
-      <br />
+      <h1>Karma Track</h1>
+      {/* <br />
       <br />
       <select onChange={updateKarmaSelect}>
         <option value="">--Please choose an option--</option>
@@ -179,7 +180,7 @@ function App() {
           },
         ]}
         style={{ width: "300px" }}
-      />
+      /> */}
     </div>
   );
 }
