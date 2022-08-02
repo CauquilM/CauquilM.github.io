@@ -1,9 +1,9 @@
 Logic :
-    ☐ Being able to range between 1 to 100 the severity of the event
+    ✔ Being able to range between 1 to 100 the severity of the event @done(22-08-02 17:38)
     
-    ☐ Being able to type a comment about the event
+    ✔ Being able to type a comment about the event @done(22-08-02 17:38)
 
-    ☐ Catch the date of the date when the karma post is created
+    ✔ Catch the date of the date when the karma post is created @done(22-08-02 18:15)
 
     ☐ Being able to see on a statistical pie chart the representation of all karma posts
 
