@@ -4,6 +4,12 @@ import "./App.css";
 import { entries, get, set, values } from "idb-keyval";
 import "console-success";
 import { PieChart } from "react-minimal-pie-chart";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import NegativeAction from "./pages/NegativeAction";
+import PositiveAction from "./pages/PositiveAction";
+import NegativeEvent from "./pages/NegativeEvent";
+import PositiveEvent from "./pages/PositiveEvent";
 
 function App() {
   const [karmaRange, setKarmaRange] = useState(1);
@@ -121,7 +127,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Karma Track</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/negative-action" element={<NegativeAction />} />
+        <Route path="/positive-action" element={<PositiveAction />} />
+        <Route path="/negative-event" element={<NegativeEvent />} />
+        <Route path="/positive-event" element={<PositiveEvent />} />
+      </Routes>
       {/* <br />
       <br />
       <select onChange={updateKarmaSelect}>
