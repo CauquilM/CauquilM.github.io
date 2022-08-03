@@ -101,9 +101,16 @@ function Form(props) {
           <TextField
             id="outlined-multiline-flexible"
             label="Multiline"
+            variant="filled"
             multiline
             maxRows={4}
             onChange={updateKarmaText}
+            sx={{".MuiInputBase-root-MuiFilledInput-root": {
+              backgroundColor: "white"
+            }}}
+            inputProps={{
+              style: { color: "white" },
+            }}
           />
         </Grid>
         <Grid item xs={12} textAlign="center"></Grid>
