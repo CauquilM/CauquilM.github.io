@@ -1,13 +1,15 @@
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import HouseOutlinedIcon from '@mui/icons-material/HouseOutlined';
-import SaveOutlinedIcon from '@mui/icons-material/SaveOutlined';
+import HouseOutlinedIcon from "@mui/icons-material/HouseOutlined";
+import SaveOutlinedIcon from "@mui/icons-material/SaveOutlined";
 
-function Footer() {
+function Footer(props) {
+  const save = () => {
+    props.save();
+  };
   return (
     <Grid
       container
-      textAlign="center"
       style={{
         marginTop: "7vh",
       }}
@@ -26,7 +28,8 @@ function Footer() {
         <Button
           variant="outlined"
           style={{ color: "white" }}
-          startIcon={<SaveOutlinedIcon />}          
+          startIcon={<SaveOutlinedIcon />}
+          onClick={save}
         >
           Save
         </Button>

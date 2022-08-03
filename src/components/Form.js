@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { entries, get, set, values } from "idb-keyval";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
+import FooterSaveBtn from "../components/FooterSaveBtn";
+import Grid from "@mui/material/Grid";
 
 function Form(props) {
   const [karmaRange, setKarmaRange] = useState(1);
@@ -70,27 +72,44 @@ function Form(props) {
     console.log("called");
   };
 
+  const toSave = () => {
+    createKarmaPost();
+  };
+
   useEffect(() => {
     getKarmaPosts();
   }, []);
   return (
     <>
-      <Slider
-        defaultValue={50}
-        aria-label="Default"
-        valueLabelDisplay="auto"
-        onChange={updateKarmaRange}
-        min={1}
-        max={100}
-      />
-      <TextField
-        id="outlined-multiline-flexible"
-        label="Multiline"
-        multiline
-        maxRows={4}
-        onChange={updateKarmaText}
-      />
-      <button onClick={createKarmaPost}>Click</button>
+      <Grid
+        container
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Grid item xs={9}>
+          <Slider
+            variant="middle"
+            defaultValue={50}
+            aria-label="Default"
+            valueLabelDisplay="auto"
+            onChange={updateKarmaRange}
+            min={1}
+            max={100}
+          />
+        </Grid>
+        <Grid item xs={12} textAlign="center">
+          <TextField
+            id="outlined-multiline-flexible"
+            label="Multiline"
+            multiline
+            maxRows={4}
+            onChange={updateKarmaText}
+          />
+        </Grid>
+        <Grid item xs={12} textAlign="center"></Grid>
+      </Grid>
+      {/* 
+      
       <p>{error}</p>
       {karmaPosts.map((post) => {
         return (
@@ -98,7 +117,8 @@ function Form(props) {
             <p>Text : {post[1].karmaText}</p>
           </div>
         );
-      })}
+      })}*/}
+      <FooterSaveBtn save={toSave} />
     </>
   );
 }

@@ -7,7 +7,6 @@ function Footer() {
   return (
     <Grid
       container
-      textAlign="center"
       style={{
         marginTop: "7vh",
       }}
