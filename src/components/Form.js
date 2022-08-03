@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { entries, get, set, values } from "idb-keyval";
+import Slider from "@mui/material/Slider";
+import TextField from "@mui/material/TextField";
 
 function Form() {
   const [karmaRange, setKarmaRange] = useState(1);
@@ -85,15 +87,21 @@ function Form() {
         <option value="negative-event">Something bad happened</option>
         <option value="positive-event">Something good happened</option>
       </select>
-      <input
-        type="range"
-        min="1"
-        max="100"
+      <Slider
+        defaultValue={50}
+        aria-label="Default"
+        valueLabelDisplay="auto"
         onChange={updateKarmaRange}
-        value={karmaRange}
+        min={1}
+        max={100}
       />
-      <p>{karmaRange}</p>
-      <input type="text" onChange={updateKarmaText} placeholder="message" />
+      <TextField
+        id="outlined-multiline-flexible"
+        label="Multiline"
+        multiline
+        maxRows={4}
+        onChange={updateKarmaText}
+      />
       <button onClick={createKarmaPost}>Click</button>
       <p>{error}</p>
       {karmaPosts.map((post) => {
@@ -103,7 +111,6 @@ function Form() {
           </div>
         );
       })}
-      <button onClick={updatePie}>Click</button>
     </>
   );
 }

@@ -17,7 +17,7 @@ function Footer() {
           variant="outlined"
           style={{ color: "white" }}
           startIcon={<HouseOutlinedIcon />}
-          href="/home"
+          href="/"
         >
           hOME
         </Button>
