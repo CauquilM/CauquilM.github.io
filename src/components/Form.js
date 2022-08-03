@@ -3,10 +3,9 @@ import { entries, get, set, values } from "idb-keyval";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 
-function Form() {
+function Form(props) {
   const [karmaRange, setKarmaRange] = useState(1);
   const [karmaText, setKarmaText] = useState();
-  const [karmaSelect, setKarmaSelect] = useState();
   const [error, setError] = useState();
   const [karmaPosts, setKarmaPosts] = useState([]);
   const [months, setMonths] = useState([
@@ -32,10 +31,6 @@ function Form() {
     setKarmaText(event.target.value);
   };
 
-  const updateKarmaSelect = (event) => {
-    setKarmaSelect(event.target.value);
-  };
-
   const createKarmaPost = () => {
     if (!karmaText) {
       setError("! You have to type a message !");
@@ -51,7 +46,7 @@ function Form() {
 
         karmaText: karmaText,
 
-        category: karmaSelect,
+        category: props.karmaCategory,
 
         // prettier-ignore
         date: `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`,
@@ -80,13 +75,6 @@ function Form() {
   }, []);
   return (
     <>
-      <select onChange={updateKarmaSelect}>
-        <option value="">--Please choose an option--</option>
-        <option value="negative-action">I did something bad</option>
-        <option value="positive-action">I did something good</option>
-        <option value="negative-event">Something bad happened</option>
-        <option value="positive-event">Something good happened</option>
-      </select>
       <Slider
         defaultValue={50}
         aria-label="Default"
