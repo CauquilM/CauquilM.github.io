@@ -98,7 +98,7 @@ function Statistics() {
               </Typography>
             </Grid>
             <Grid item>
-              <SquareIcon style={{ color: "#C70039" }} />
+              <SquareIcon style={{ color: "#DAF7A6" }} />
             </Grid>
           </Grid>
         </Grid>
@@ -112,7 +112,7 @@ function Statistics() {
               </Typography>
             </Grid>
             <Grid item>
-              <SquareIcon style={{ color: "#C70039" }} />
+              <SquareIcon style={{ color: "#FFC300" }} />
             </Grid>
           </Grid>
         </Grid>
@@ -126,7 +126,7 @@ function Statistics() {
               </Typography>
             </Grid>
             <Grid item>
-              <SquareIcon style={{ color: "#C70039" }} />
+              <SquareIcon style={{ color: "#FF5733" }} />
             </Grid>
           </Grid>
         </Grid>
