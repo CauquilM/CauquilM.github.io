@@ -51,7 +51,7 @@ function App() {
               title="Positive Event"
               bgColor="#229021"
               karmaCategory="positive-event"
-              title_category={["Positive", "positive", "Event", "Event"]}
+              title_category={["Positive", "positive", "Event", "event"]}
             />
           }
         />

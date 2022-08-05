@@ -35,7 +35,7 @@ function Home() {
           </Button>
         </Grid>
         <Grid item xs={5} textAlign="center">
-          <Button href="/positive-action" variant="contained" size="large">
+          <Button href="/positive-event" variant="contained" size="large">
             Something positive happened
           </Button>
         </Grid>

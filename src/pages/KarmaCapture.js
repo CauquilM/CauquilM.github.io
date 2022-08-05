@@ -43,7 +43,7 @@ function KarmaCapture(props) {
           </Grid>
         </Grid>
       </Grid>
-      <Form />
+      <Form karmaCategory={props.karmaCategory}/>
     </div>
   );
 }
