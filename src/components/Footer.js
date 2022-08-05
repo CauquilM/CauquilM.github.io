@@ -2,7 +2,7 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import SettingsIcon from "@mui/icons-material/Settings";
 import QueryStatsOutlinedIcon from "@mui/icons-material/QueryStatsOutlined";
-import HistoryIcon from '@mui/icons-material/History';
+import HistoryIcon from "@mui/icons-material/History";
 
 function Footer() {
   return (
@@ -27,7 +27,7 @@ function Footer() {
           variant="outlined"
           style={{ color: "white" }}
           startIcon={<HistoryIcon />}
-          href="/statistics"
+          href={`/history/:karmaCategory`}
         >
           History
         </Button>

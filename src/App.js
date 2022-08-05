@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Statistics from "./pages/Statistics";
 import Settings from "./pages/Settings";
 import KarmaCapture from "./pages/KarmaCapture";
+import Historic from "./pages/Historic";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -56,7 +58,10 @@ function App() {
           }
         />
         <Route path="/statistics" element={<Statistics />} />
+        <Route path="/historic/:karmaCategory" element={<Historic />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="" element={<Home />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );
