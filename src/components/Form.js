@@ -4,6 +4,7 @@ import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 import FooterSaveBtn from "../components/FooterSaveBtn";
 import Grid from "@mui/material/Grid";
+import { Typography } from "@mui/material";
 
 function Form(props) {
   const [karmaRange, setKarmaRange] = useState(1);
@@ -81,11 +82,7 @@ function Form(props) {
   }, []);
   return (
     <>
-      <Grid
-        container
-        alignItems="center"
-        justifyContent="center"
-      >
+      <Grid container alignItems="center" justifyContent="center">
         <Grid item xs={9}>
           <Slider
             variant="middle"
@@ -105,15 +102,24 @@ function Form(props) {
             multiline
             maxRows={4}
             onChange={updateKarmaText}
-            sx={{".MuiInputBase-root-MuiFilledInput-root": {
-              backgroundColor: "white"
-            }}}
+            sx={{
+              ".MuiInputBase-root-MuiFilledInput-root": {
+                backgroundColor: "white",
+              },
+            }}
             inputProps={{
               style: { color: "white" },
             }}
+            InputLabelProps={{
+              style: { color: "#fff" },
+            }}
           />
         </Grid>
-        <Grid item xs={12} textAlign="center"></Grid>
+        <Grid item xs={12} textAlign="center" style={{marginTop: '20px'}}>
+          <Typography variant="6" component="h3">
+            {error}
+          </Typography>
+        </Grid>
       </Grid>
       {/* 
       
