@@ -58,6 +58,7 @@ function Form(props) {
 
         value: 0,
       });
+      setError("Post created with success");
       console.log("Success");
       if (error) {
         setError();
@@ -115,7 +116,7 @@ function Form(props) {
             }}
           />
         </Grid>
-        <Grid item xs={12} textAlign="center" style={{marginTop: '20px'}}>
+        <Grid item xs={12} textAlign="center" style={{ marginTop: "20px" }}>
           <Typography variant="6" component="h3">
             {error}
           </Typography>
