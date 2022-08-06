@@ -109,7 +109,7 @@ function Form(props) {
           </Typography>
         </Grid>
       </Grid>
-      <FooterSaveBtn save={toSave} />
+      <FooterSaveBtn save={toSave} karmaCategory={props.karmaCategory} />
     </>
   );
 }
