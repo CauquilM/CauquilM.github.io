@@ -1,7 +1,8 @@
+import Error404 from "../components/Error404";
 function PageNotFound() {
   return (
     <div>
-      <p>Sorry :" Your page doesn't exist</p>
+      <Error404/>
     </div>
   );
 }
