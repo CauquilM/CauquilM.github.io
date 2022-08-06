@@ -1,6 +1,7 @@
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import SettingsIcon from "@mui/icons-material/Settings";
+import HouseOutlinedIcon from "@mui/icons-material/HouseOutlined";
 import QueryStatsOutlinedIcon from "@mui/icons-material/QueryStatsOutlined";
 import HistoryIcon from "@mui/icons-material/History";
 
@@ -16,20 +17,20 @@ function Footer() {
         <Button
           variant="outlined"
           style={{ color: "white" }}
-          startIcon={<QueryStatsOutlinedIcon />}
-          href="/statistics"
+          startIcon={<HouseOutlinedIcon />}
+          href="/"
         >
-          Stats
+          Home
         </Button>
       </Grid>
       <Grid item xs={4} textAlign="center">
         <Button
           variant="outlined"
           style={{ color: "white" }}
-          startIcon={<HistoryIcon />}
-          href={`/history/:karmaCategory`}
+          startIcon={<QueryStatsOutlinedIcon />}
+          href="/statistics"
         >
-          History
+          Stats
         </Button>
       </Grid>
       <Grid item xs={4} textAlign="center">

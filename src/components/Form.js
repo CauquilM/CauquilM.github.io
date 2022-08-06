@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { entries, get, set, values } from "idb-keyval";
+import { set } from "idb-keyval";
 import Slider from "@mui/material/Slider";
 import TextField from "@mui/material/TextField";
 import FooterSaveBtn from "../components/FooterSaveBtn";
@@ -10,7 +10,6 @@ function Form(props) {
   const [karmaRange, setKarmaRange] = useState(1);
   const [karmaText, setKarmaText] = useState();
   const [error, setError] = useState();
-  const [karmaPosts, setKarmaPosts] = useState([]);
   const [months, setMonths] = useState([
     "January",
     "February",
@@ -64,23 +63,11 @@ function Form(props) {
         setError();
       }
     }
-    getKarmaPosts();
-  };
-
-  const getKarmaPosts = () => {
-    entries().then((entries) => {
-      setKarmaPosts(entries);
-    });
-    console.log("called");
   };
 
   const toSave = () => {
     createKarmaPost();
   };
-
-  useEffect(() => {
-    getKarmaPosts();
-  }, []);
   return (
     <>
       <Grid container alignItems="center" justifyContent="center">
@@ -122,16 +109,6 @@ function Form(props) {
           </Typography>
         </Grid>
       </Grid>
-      {/* 
-      
-      <p>{error}</p>
-      {karmaPosts.map((post) => {
-        return (
-          <div key={post[1].id}>
-            <p>Text : {post[1].karmaText}</p>
-          </div>
-        );
-      })}*/}
       <FooterSaveBtn save={toSave} />
     </>
   );

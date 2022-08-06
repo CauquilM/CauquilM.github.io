@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { values } from "idb-keyval";
 import { Grid, Typography } from "@mui/material";
 import SquareIcon from "@mui/icons-material/Square";
-import Footer from "../components/FooterSaveBtn";
+import Footer from "../components/Footer";
 
 function Statistics() {
   const [negative_action, setNegativeAction] = useState(0);
@@ -131,7 +131,6 @@ function Statistics() {
           </Grid>
         </Grid>
         <Grid item xs={12} textAlign="center">
-          <Typography></Typography>
           <Grid container alignItems="stretch" justifyContent="center">
             <Grid item>
               <Typography>
@@ -146,7 +145,7 @@ function Statistics() {
           </Grid>
         </Grid>
       </Grid>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

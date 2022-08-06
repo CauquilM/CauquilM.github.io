@@ -30,7 +30,7 @@ function Footer(props) {
           variant="outlined"
           style={{ color: "white" }}
           startIcon={<HistoryIcon />}
-          href="/statistics"
+          href="/historic"
         >
           History
         </Button>

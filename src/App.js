@@ -59,7 +59,7 @@ function App() {
           }
         />
         <Route path="/statistics" element={<Statistics />} />
-        <Route path="/historic/:karmaCategory" element={<Historic />} />
+        <Route path="/historic" element={<Historic />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
