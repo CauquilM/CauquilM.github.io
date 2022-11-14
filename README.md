@@ -5,7 +5,7 @@
 Quand j'étais au lycée j'utilisais une application pour suivre mon karma. Mais hélas, cette app n'était disponible que sur Windows Phone.
 Du coup j'ai voulu recréer cette application pour pouvoir l'utiliser tant sur mon pc que sur mobile.
 
-J’ai utilisé une API pour récupérer les citations.
+Les données sont stockées dans l'appareil qui utilise l'app.
 
 ### Environnement :
 - ReactJS
