@@ -1,17 +1,17 @@
-# Générateur de citation :closed_book:
+# Karma track :blue_book:
 
 ## Description du projet :
 
-Cet exercice était un projet de frontend mentor, avec une user story et des maquettes je devais reproduire le plus fidèlement possible le site internet demandé.
+Quand j'étais au lycée j'utilisais une application pour suivre mon karma. Mais hélas, cette app n'était disponible que sur Windows Phone.
+Du coup j'ai voulu recréer cette application pour pouvoir l'utiliser tant sur mon pc que sur mobile.
 
 J’ai utilisé une API pour récupérer les citations.
 
 ### Environnement :
-- HTML
-- CSS
-- JS
-- API
-- Axios
+- ReactJS
+- React Router
+- Pie Charts
+- Idb keyval
 - Windows 10
 - Visual Studio Code
 - Vercel
